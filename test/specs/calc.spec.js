@@ -20,11 +20,15 @@
           expect( result ).to.equal(0);
         });
 
-        it('should handle and empty array', function() {
+        it('should handle an empty array', function() {
           let result = window.calc.sum([]);
 
           expect( result ).to.equal(0);
         });
+
+        // it('should handle an object as the argument', function() {
+        //   let result =
+        // });
 
 
 
