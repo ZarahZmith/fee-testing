@@ -6,7 +6,7 @@
     // TODO: Your tests go here!
     describe('calc', function() {
       describe('sum function', function() {
-        
+
         it('should return the sum of one plus one', function() {
           let result = window.calc.sum([1, 1]);
 
@@ -19,6 +19,12 @@
 
           expect( result ).to.be.a('number');
           expect( result ).to.equal(24);
+        });
+
+        it('should handle no arguments', function() {
+          let result = window.calc.sum();
+          
+          expect( result ).to.equal(0);
         });
 
 
