@@ -23,7 +23,13 @@
 
         it('should handle no arguments', function() {
           let result = window.calc.sum();
-          
+
+          expect( result ).to.equal(0);
+        });
+
+        it('should handle and empty array', function() {
+          let result = window.calc.sum([]);
+
           expect( result ).to.equal(0);
         });
 
