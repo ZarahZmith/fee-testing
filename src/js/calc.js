@@ -14,7 +14,10 @@
 
         //if the numbers are falsey return the total
         if (!numbers) {
-            return total;
+          return total;
+        }
+        if (!Array.isArray(numbers)) {
+          return NaN;
         }
 
         numbers.forEach(function addThem(num) {

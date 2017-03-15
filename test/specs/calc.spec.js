@@ -26,8 +26,14 @@
           expect( result ).to.equal(0);
         });
 
-        // it('should handle an object as the argument', function() {
-        //   let result =
+        it('should handle anything other than an array as the argument', function() {
+          let result = window.calc.sum({});
+
+          expect( result ).to.be.NaN;
+        });
+
+        // it('should handle a string containing a number', function() {
+        //
         // });
 
 
@@ -37,9 +43,5 @@
 
       });
     });
-
-
-
-
 
 })();
