@@ -14,13 +14,6 @@
           expect( result ).to.equal(2);
         });
 
-        it('should give the sum when provided and array of multiple numbers', function() {
-          let result = window.calc.sum([4, 7, 13]);
-
-          expect( result ).to.be.a('number');
-          expect( result ).to.equal(24);
-        });
-
         it('should handle no arguments', function() {
           let result = window.calc.sum();
 
@@ -32,6 +25,10 @@
 
           expect( result ).to.equal(0);
         });
+
+
+
+
 
 
       });
