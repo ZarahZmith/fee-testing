@@ -5,12 +5,14 @@
 
     /**
      * Adds whatever numbers are provided and returns the total
-     * @param  {Array} numbers  The numbers to add together
+     * @param  {Array} numbers  The numbers to add together, defaults to empty array
      * @return {Number}         The total of all numbers
      */
-    window.calc.sum = function sum(numbers) {
+    window.calc.sum = function sum(numbers = []) {
+        //establishes a default value for the total variable
         let total = 0;
 
+        //if the numbers are falsey return the total
         if (!numbers) {
             return total;
         }
