@@ -77,6 +77,18 @@
           expect( result ).to.be.a('number').and.to.equal(120);
         });
 
+        it('should find the factorial given a number in a string', function() {
+          let result = window.calc.factorial('5');
+
+          expect( result ).to.be.a('number').and.to.equal(120);
+        });
+
+        it('should find the factorial given a NaN in a string', function() {
+          let result = window.calc.factorial('la');
+
+          expect( result ).to.be.NaN;
+        });
+
       });
     });
 

@@ -39,8 +39,9 @@
     window.calc.factorial = function factorial(topNumber) {
         let total = 1;
 
-        if (typeof(topNumber) !== 'number') {
-          return 0;
+        topNumber = Number(topNumber);
+        if (typeof(topNumber) !== 'number' || Number.isNaN(topNumber)) {
+          return NaN;
         }
 
         for (let i = 1; i <= topNumber; i++) {
