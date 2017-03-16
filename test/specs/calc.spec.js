@@ -1,20 +1,30 @@
 (function() {
     'use strict';
 
+    //allows us to shorten this throughtout, chai.expect is a global namespace, handles assertions
     let expect = chai.expect;
 
     // TODO: Your tests go here!
+    //"describe" contains a collection of tests
     describe('calc', function() {
       describe('sum function', function() {
 
+        it('should be a function', function() {
+          //sanity check
+          expect( window.calc.sum ).to.be.a('function');
+        });
+
+        //"it" is a single test
         it('should return the sum of one plus one', function() {
+          //allows us to capture the result
           let result = window.calc.sum([1, 1]);
 
+          //"expect" means you're handling an assertion
           expect( result ).to.be.a('number');
           expect( result ).to.equal(2);
         });
 
-        it('should handle no arguments', function() {
+        it('should handle empty argument', function() {
           let result = window.calc.sum();
 
           expect( result ).to.equal(0);
@@ -48,9 +58,14 @@
 
       });
 
-      // describe('factorial function', function() {
-      //
-      // });
+      describe('factorial function', function() {
+
+        it('should be a function', function() {
+          //sanity test
+          expect( window.calc.factorial ).to.be.a.function
+        });
+
+      });
     });
 
 })();
