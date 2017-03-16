@@ -32,8 +32,17 @@
           expect( result ).to.be.NaN;
         });
 
+        it('should handle only one argument', function() {
+          let result = window.calc.sum([3]);
+
+          expect( result ).to.be.a('number');
+          expect( result ).to.equal(3);
+        });
+
         // it('should handle a string containing a number', function() {
+        //   let result = window.calc.sum('3', '8');
         //
+        //   expect( result ).to.be.a('number').and.to.equal(11);
         // });
 
 
