@@ -9,6 +9,7 @@
      * @return {Number}         The total of all numbers
      */
     window.calc.sum = function sum(numbers = []) {
+
         //establishes a default value for the total variable
         let total = 0;
 
@@ -21,7 +22,8 @@
         }
 
         numbers.forEach(function addThem(num) {
-            total += num;
+          num = Number(num);
+          total += num;
         });
         return total;
     };
@@ -38,11 +40,11 @@
         const total = 0;
 
         if (typeof(topNumber) !== 'number') {
-            return 0;
+          return 0;
         }
 
         for (let i = 1; i <= topNumber; i++) {
-            total *= i;
+          total *= i;
         }
 
         return total;
